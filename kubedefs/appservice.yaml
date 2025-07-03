@@ -2,11 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: vproapp-service
+  annotations:
+    service.beta.kuberenetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:692859928420:certificate/7979c2ba-6728-453e-ba24-f125b80ca592
 spec:
   ports:
   - port: 8080
     protocol: TCP
-    targetPort: 8080
+    targetPort: vproapp-port
   selector:
     app: vproapp
   type: ClusterIP
