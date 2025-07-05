@@ -6,10 +6,6 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-    - "*.kyleallendorf.dev"
-    secretName: self-signed-tls
   rules:
   - host: "*.kyleallendorf.dev"
     http:
