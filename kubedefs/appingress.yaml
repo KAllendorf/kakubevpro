@@ -7,10 +7,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: aa1d4c173cb4149a99cd1b03c73cf450-a43a4286bd0147d3.elb.us-east-1.amazonaws.com
+  - host: vprofile.kyleallendorf.dev
     http:
       paths:
-      - path: /*
+      - path: /
         pathType: Prefix
         backend:
           service:
