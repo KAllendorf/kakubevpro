@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - vprofile.kyleallendorf.dev
+    - "*.kyleallendorf.dev"
     secretName: self-signed-tls
   rules:
-  - host: vprofile.kyleallendorf.dev
+  - host: "*.kyleallendorf.dev"
     http:
       paths:
       - path: /*
